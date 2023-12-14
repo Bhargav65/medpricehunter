@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .card {
+      width: 500px;
+      height: 500px;
+      margin: 0 auto;
+      background-color: skyblue;
+      border-radius: 8px;
+      z-index: 1;
+    }
+
+    .tools {
+      display: flex;
+      align-items: center;
+      padding: 9px;
+    }
+
+    .circle {
+      padding: 0 4px;
+    }
+
+    .box {
+      display: inline-block;
+      align-items: center;
+      width: 10px;
+      height: 10px;
+      padding: 1px;
+      border-radius: 50%;
+    }
+
+    .red {
+      background-color: #ff605c;
+    }
+
+    .yellow {
+      background-color: #ffbd44;
+    }
+
+    .green {
+      background-color: #00ca4e;
+    }
+
+    .card__content {
+      padding: 20px;
+    }
+
+    #pharmacyData {
+      margin: 0;
+      color: #333;
+    }
+
+    #pharmacyData a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    #pharmacyData a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <center>
+    <h1>Result...</h1>
+  </center>
+  <div class="card">
+    <div class="tools">
+      <div class="circle">
+        <span class="red box"></span>
+      </div>
+      <div class="circle">
+        <span class="yellow box"></span>
+      </div>
+      <div class="circle">
+        <span class="green box"></span>
+      </div>
+    </div>
+    <div class="card__content">
+      <p id="pharmacyData"></p>
+    </div>
+  </div>
+
+  <script>
+    // Your data
+    var finpharmhref = ["url"];
+    var finpharmind = ["index"];
+    var finpharmname = ["name"];
+
+    // Construct the HTML content
+    var pharmacyDataHTML = "URL: <a href='" + finpharmhref[0] + "'>" + finpharmhref[0] + "</a><br>" +
+      "Index: " + finpharmind[0] + "<br>" +
+      "Name: " + finpharmname[0];
+
+    // Insert the HTML content into the 'pharmacyData' element
+    document.getElementById("pharmacyData").innerHTML = pharmacyDataHTML;
+  </script>
+</body>
+
+</html>
